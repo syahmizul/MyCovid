@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.syahmizul.mycovid.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/menu_nav_register" />
+        <action
+            android:id="@+id/action_loginFragment_to_menu_nav_home"
+            app:destination="@id/menu_nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_nav_home"
+        android:name="com.syahmizul.mycovid.ui.home.HomeDefaultFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home_default" />
+
+    <fragment
+        android:id="@+id/menu_nav_trace"
+        android:name="com.syahmizul.mycovid.ui.scanner.ScannerFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_scanner" />
+
+    <fragment
+        android:id="@+id/menu_nav_list"
+        android:name="com.syahmizul.mycovid.ui.dataview.dataviewFragment"
+        android:label="@string/menu_nav_list"
+        tools:layout="@layout/fragment_dataview" />
+    <fragment
+        android:id="@+id/menu_nav_register"
+        android:name="com.syahmizul.mycovid.ui.register.RegisterFragment"
+        android:label="@string/menu_register"
+        tools:layout="@layout/fragment_register"/>
+    <fragment
+        android:id="@+id/menu_nav_traceRegister"
+        android:name="com.syahmizul.mycovid.ui.traceregister.TraceRegisterFragment"
+        android:label="@string/menu_nav_traceRegister"
+        tools:layout="@layout/fragment_traceregister"/>
+    <!--<fragment
+        android:id="@+id/menu_nav_statistic"
+        android:name="com.syahmizul.mycovid.ui.home.StatisticFragment"
+        android:label="Statistics"
+        tools:layout="@layout/fragment_home_statistics"/>-->
+
+</navigation>
